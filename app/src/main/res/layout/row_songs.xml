@@ -1,8 +1,10 @@
-
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="@android:color/white"
+    xmlns:card_view="http://schemas.android.com/tools"
+    app:cardBackgroundColor="@color/colorPrimaryDark"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="16dp"
     android:layout_height="wrap_content">
 
         <LinearLayout
@@ -20,17 +22,17 @@
 
                 <TextView
                     android:id="@+id/tvSongName"
+                    android:textColor="@color/colorPrimary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="Shape of you" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/tvArtistName"
+                    android:textColor="@color/LightGreen"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:text="Ed Sheeran" />
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <Button

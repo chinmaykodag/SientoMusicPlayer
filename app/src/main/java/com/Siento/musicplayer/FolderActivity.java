@@ -3,6 +3,7 @@ package com.Siento.musicplayer;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.Rect;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
@@ -43,6 +44,8 @@ public class FolderActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
                 linearLayoutManager.getOrientation());
+        SpacesItemDecorator itemDecorator = new SpacesItemDecorator(16);
+        recyclerView.addItemDecoration(itemDecorator);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.addItemDecoration(dividerItemDecoration);
         songAdapter.setOnItemClickListener(new SongAdapter.OnItemClickListener() {
@@ -168,6 +171,22 @@ public class FolderActivity extends AppCompatActivity {
             cursor.close();
             songAdapter = new SongAdapter(FolderActivity.this,_songs);
 
+        }
+    }
+
+    public class SpacesItemDecorator extends RecyclerView.ItemDecoration {
+
+        private final int space;
+
+        public SpacesItemDecorator(int spaceInPx) {
+            this.space = spaceInPx;
+        }
+
+        @Override
+        public void getItemOffsets(Rect outRect, View view, RecyclerView parent,
+                                   RecyclerView.State state) {
+            outRect.left = space;
+            outRect.right = space;
         }
     }
 }

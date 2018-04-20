@@ -20,6 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".FolderActivity" />
+        <activity android:name=".OnlineAdapter" />
+        <activity android:name=".OnlineStream"></activity>
     </application>
 
 </manifest>
