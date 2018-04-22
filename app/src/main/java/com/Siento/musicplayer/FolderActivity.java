@@ -26,7 +26,7 @@ import java.util.ArrayList;
 
 public class FolderActivity extends AppCompatActivity {
 
-    private ArrayList<SongInfo> _songs = new ArrayList<SongInfo>();;
+    private ArrayList<SongInfo> _songs = new ArrayList<SongInfo>();
     RecyclerView recyclerView;
     SeekBar seekBar;
     SongAdapter songAdapter;

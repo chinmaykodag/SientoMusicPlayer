@@ -18,6 +18,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText Password;
     private TextView Info;
     private Button Login;
+    private Button Online;
     private Toast toast;
     private int counter=3;
 
@@ -29,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         Password= (EditText)findViewById(R.id.editText2);
         Info= (TextView) findViewById(R.id.tvinfo);
         Login= (Button) findViewById(R.id.button);
-
+        Online=(Button) findViewById(R.id.onlineButton);
 
 
         Info.setText("number of attempts remaining 3");
@@ -38,6 +39,16 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 validate(Name.getText().toString(),Password.getText().toString());
+            }
+        });
+
+        Online.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(LoginActivity.this,OnlineStream.class);
+                startActivity(intent);
+                toast=Toast.makeText(getApplicationContext(),"Entering online streaming mode",Toast.LENGTH_LONG);
+                toast.show();
             }
         });
 
@@ -77,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
                 toast=Toast.makeText(getApplicationContext(),"ERROR: Login Attempt Limit Reached",Toast.LENGTH_LONG);
                 toast.show();
             }
-            
+
         }
     }
 }

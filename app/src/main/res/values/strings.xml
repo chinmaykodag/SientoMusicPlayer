@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Siento</string>
+    <string name="song_name1">Sky Full of Stars</string>
+    <string name="artist_name1">ColdPlay</string>
+    <string name="song_name2">Blood Sweat and Tears</string>
+    <string name="artist_name2">BTS</string>
+    <string name="song_name3">Papaoutai</string>
+    <string name="artist_name3">Stromae</string>
+    <string name="title_activity_on_stream">OnStream</string>
 </resources>

@@ -15,24 +15,17 @@
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".FolderActivity" />
         <activity android:name=".LoginActivity">
-
             <intent-filter>
-                <category android:name="android.intent.category.DEFAULT">
-
-                </category>
-
+                <category android:name="android.intent.category.DEFAULT"></category>
             </intent-filter>
         </activity>
-
-        <activity android:name=".OnlineAdapter" />
-        <activity android:name=".OnlineStream"></activity>
-
-
+        <activity android:name=".OnlineStream" />
     </application>
 
 </manifest>

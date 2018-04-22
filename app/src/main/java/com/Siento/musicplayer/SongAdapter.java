@@ -10,10 +10,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by pawankumar on 30/05/17.
- */
-
 public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongHolder> {
 
     private ArrayList<SongInfo> _songs = new ArrayList<SongInfo>();
@@ -70,4 +66,6 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongHolder> {
             btnAction = (Button) itemView.findViewById(R.id.btnPlay);
         }
     }
+
+
 }
